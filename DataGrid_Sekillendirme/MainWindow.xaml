@@ -12,15 +12,30 @@
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="0">
-            <DataGrid x:Name="kitap_liste_grid" ItemsSource="{Binding}" AutoGenerateColumns="True">
+            <DataGrid x:Name="kitap_liste_grid">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header=""/>
+                    <DataGridTextColumn 
+                        Binding="{Binding Path=Barkod}"
+                        Header="Barkod"
+                        Width="50"
+                        />
+                    <DataGridTextColumn
+                        Binding="{Binding Path=YazarAdiID}"
+                        Header="Yazar Adı"
+                        Width="100"
+                        />
+
+                    <DataGridTextColumn
+                        Binding="{Binding Path=KitapTuru}"
+                        Header="Kitap Türü"
+                        Width="100"
+                        />
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
         <Border Grid.Row="1">
             <DockPanel Width="270">
-                <Button x:Name="temizle_button" Content="Temizle"/>
+                <Button x:Name="temizle_button" Content="Temizle" Click="temizle_button_Click"/>
                 <Button x:Name="listele_button" Content="Listele" Click="listele_button_Click"/>
                 <Button x:Name="cikis_button" Content="Çıkış" Click="cikis_button_Click"/>
             </DockPanel>

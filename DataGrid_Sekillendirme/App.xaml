@@ -6,7 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="style\genel.xaml"/>               
+                <ResourceDictionary Source="style\genel.xaml"/>
+                <ResourceDictionary Source="style\datagrid.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
         </ResourceDictionary>

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DBbaglanti;
+using DataBase;
 
 namespace DataGrid_Sekillendirme
 {
@@ -37,7 +37,12 @@ namespace DataGrid_Sekillendirme
 
         private void listele_button_Click(object sender, RoutedEventArgs e)
         {
-            DBlisteleme.DBGrid_Listelme(kitap_liste_grid);
+            DB_Listeleme.DBGrid_Listelme(kitap_liste_grid);
+        }
+
+        private void temizle_button_Click(object sender, RoutedEventArgs e)
+        {
+            kitap_liste_grid.ItemsSource = null;
         }
     }
 }
