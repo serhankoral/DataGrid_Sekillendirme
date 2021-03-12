@@ -17,7 +17,8 @@
                     <DataGridTextColumn 
                         Binding="{Binding Path=Barkod}"
                         Header="Barkod"
-                        Width="50"
+                        Width="100"
+                        
                         />
                     <DataGridTextColumn
                         Binding="{Binding Path=YazarAdiID}"

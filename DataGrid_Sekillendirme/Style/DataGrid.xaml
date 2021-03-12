@@ -3,6 +3,9 @@
 
 
     <Style TargetType="{x:Type DataGrid}">
+        <Setter Property="BorderThickness" Value="0,0,0,0"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Width" Value="300"/>
         <Setter Property="ItemsSource" Value="{Binding}"/>
         <Setter Property="AutoGenerateColumns" Value="False"/>
         <Setter Property="CanUserReorderColumns" Value="False"/>
@@ -14,31 +17,47 @@
         <Setter Property="HeadersVisibility" Value="Column"/>
         <Setter Property="CanUserSortColumns" Value="True"/>
         <Setter Property="Background" Value="{x:Null}"/>
-        <Setter Property="HorizontalGridLinesBrush" Value="#FFC7C2BD"/>
-        <Setter Property="VerticalGridLinesBrush" Value="#FFC7C2BD"/>
-        <Setter Property="RowHeight" Value="25"/>
-        <Setter Property="ColumnHeaderHeight" Value="25"/>
+        <Setter Property="RowHeight" Value="30"/>
+        <Setter Property="ColumnHeaderHeight" Value="30"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="Black"/>
+        <Setter Property="VerticalGridLinesBrush" Value="{x:Null}"/>
+        <!--Bunlar Satırları Birden Fazla Renli olması için kullanılır-->
+        <!--<Setter Property="RowBackground" Value="#FFF2F2F2"/>
+        <Setter Property="AlternatingRowBackground" Value="White"/>-->
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+
     </Style>
     <Style TargetType="{x:Type DataGridColumnHeader}">
-        <Setter Property="Background" Value="#FF5A5F6A"/>
-        <Setter Property="Foreground" Value="#FFC7C2BD"/>
-        <Setter Property="BorderBrush" Value="#FFC7C2BD"/>
-        <Setter Property="BorderThickness" Value="1,0,0,0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="ToolTip" Value="Sıralama İçin Tıklayınız."/>
             </Trigger>
         </Style.Triggers>
     </Style>
-
     <Style TargetType="{x:Type DataGridCell}">
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="#FFC7C2BD"/>
-        <Setter Property="BorderThickness" Value="1,0,0,0"/>
-        <Setter Property="BorderBrush" Value="#FFC7C2BD"/>
+        <Setter Property="Background" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        
+
     </Style>
     <Style TargetType="{x:Type DataGridRow}">
-        <Setter Property="Background" Value="Red"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,0"/>
     </Style>
+
 </ResourceDictionary>
 
